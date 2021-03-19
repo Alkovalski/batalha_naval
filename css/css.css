@@ -1,0 +1,29 @@
+.barquenhos{
+		border: solid;
+		position: relative;
+		float: left;
+		top: 50px;
+		left: 135px;
+}
+.squarenix{
+	width: 40px;
+	height: 40px;
+	background-color: white;
+	font-size: 0px;
+}
+.OLD_SPICE{
+	/*BLOQUEIA ATÉ A ETERNIDADE SE VOCÊ DEIXAR*/
+	width:517px;
+	height:600px;
+	position: absolute;
+	top: 94px; /*142*/
+	left: 658px;
+	background-color: white;
+}
+
+
+
+
+
+
+

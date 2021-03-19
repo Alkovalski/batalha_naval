@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BATALHA NAVAL</title>
+		<meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/css.css">
+		<script src="js/jajascripeteVetorizado.js"></script>
+		</head>
+	<body background-image="img/a.png">
+		<br></br>
+		<input type="button" class="trocar" onclick="begin()" value="Iniciar Jogo"></input>
+		<input type="button" class="trocar" onclick="ocult()" value="Trocar Tabela"></input>
+		<div class="barquenhos">
+		<table border="1px">
+			<tr>
+				<td width="40px" height="40px"><img src="img/x.png" width="40px" height="40px"></td>
+				<td width="40px" height="40px"><img src="img/a.png" width="40px" height="40px"></td>
+				<td width="40px" height="40px"><img src="img/b.png" width="40px" height="40px"></td>
+				<td width="40px" height="40px"><img src="img/c.png" width="40px" height="40px"></td>
+				<td width="40px" height="40px"><img src="img/d.png" width="40px" height="40px"></td>
+				<td width="40px" height="40px"><img src="img/e.png" width="40px" height="40px"></td>
+				<td width="40px" height="40px"><img src="img/f.png" width="40px" height="40px"></td>
+				<td width="40px" height="40px"><img src="img/g.png" width="40px" height="40px"></td>
+				<td width="40px" height="40px"><img src="img/h.png" width="40px" height="40px"></td>
+				<td width="40px" height="40px"><img src="img/i.png" width="40px" height="40px"></td>
+				<td width="40px" height="40px"><img src="img/j.png" width="40px" height="40px"></td>
+			</tr>
+			<tr>
+				<td width="40px" height="40px"><img src="img/1.png" class="squarenix"></td> <!--1 linha é n°--><!--[x,y]-->
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+			</tr>
+			<tr>
+				<td width="40px" height="40px"><img src="img/2.png" class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+			</tr>
+			<tr>
+				<td width="40px" height="40px"><img src="img/3.png" class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+			</tr>
+			<tr>
+				<td width="40px" height="40px"><img src="img/4.png" class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+			</tr>
+			<tr>
+				<td width="40px" height="40px"><img src="img/5.png" class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+			</tr>
+			<tr>
+				<td width="40px" height="40px"><img src="img/6.png" class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+			</tr>
+			<tr>
+				<td width="40px" height="40px"><img src="img/7.png" class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+			</tr>
+			<tr>
+				<td width="40px" height="40px"><img src="img/8.png" class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+			</tr>
+			<tr>
+				<td width="40px" height="40px"><img src="img/9.png" class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+			</tr>
+			<tr>
+				<td width="40px" height="40px"><img src="img/10.png" class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+				<td class="squarenix"></td>
+			</tr>
+		</table>
+		</div>
+		<div class="barquenhos">
+			<table border="1px"> <!--2 table-->
+				<tr> <!--letras-->
+					<td width="40px" height="40px"><img src="img/x.png" class="squarenix"></td>
+					<td width="40px" height="40px"><img src="img/a.png" class="squarenix"></td>
+					<td width="40px" height="40px"><img src="img/b.png" class="squarenix"></td>
+					<td width="40px" height="40px"><img src="img/c.png" class="squarenix"></td>
+					<td width="40px" height="40px"><img src="img/d.png" class="squarenix"></td>
+					<td width="40px" height="40px"><img src="img/e.png" class="squarenix"></td>
+					<td width="40px" height="40px"><img src="img/f.png" class="squarenix"></td>
+					<td width="40px" height="40px"><img src="img/g.png" class="squarenix"></td>
+					<td width="40px" height="40px"><img src="img/h.png" class="squarenix"></td>
+					<td width="40px" height="40px"><img src="img/i.png" class="squarenix"></td>
+					<td width="40px" height="40px"><img src="img/j.png" class="squarenix"></td>
+				</tr>
+				<tr>
+					<td width="40px" height="40px"><img src="img/1.png" class="squarenix"></td> <!--1 linha é n°--><!--[x,y]-->
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+				</tr>
+				<tr>
+					<td width="40px" height="40px"><img src="img/2.png" class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+				</tr>
+				<tr>
+					<td width="40px" height="40px"><img src="img/3.png" class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+				</tr>
+				<tr>
+					<td width="40px" height="40px"><img src="img/4.png" class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+				</tr>
+				<tr>
+					<td width="40px" height="40px"><img src="img/5.png" class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+				</tr>
+				<tr>
+					<td width="40px" height="40px"><img src="img/6.png" class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+				</tr>
+				<tr>
+					<td width="40px" height="40px"><img src="img/7.png" class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+				</tr>
+				<tr>
+					<td width="40px" height="40px"><img src="img/8.png" class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+				</tr>
+				<tr>
+					<td width="40px" height="40px"><img src="img/9.png" class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+				</tr>
+				<tr>
+					<td width="40px" height="40px"><img src="img/10.png" class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+					<td class="squarenix"></td>
+				</tr>
+			</table>
+		</div>
+		<div class="OLD_SPICE">
+			<br></br>
+			          Minimo de 20 barcos por tabela para a partida começar
+			<br></br>
+			          Caso coloque um errado, clique em cima novamente para remove-lo
+			<br></br>
+			          Ganha quem derrubar todos os barcos do inimigo
+			<br></br>
+			<audio autoplay controls loop src="img/music.ogg" type="audio/ogg"></audio>	
+			<br></br>
+			<spam>          Musiquinha pra descontrair</spam>
+			<br></br>
+			<br></br>
+			<div id="pontuaçãoA">          Barcos da tabela A: 0</div>
+			<div id="pontuaçãoB">          Barcos da tabela B: 0</div>
+			<div id="log">,</div>
+			<br></br>
+	</body>
+</html>
