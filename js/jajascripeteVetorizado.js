@@ -1,6 +1,6 @@
 var inicio, total_barcosA, total_barcosB, barco, tabelaA, tabelaB, Vetor = [], ContadorDoVetor;
 
-inicio = parseInt(inicio);
+inicio = parseInt(inicio); //é uma ótima pergunta o por que de eu ter colocado parseInt só nessa variavel, e não nas outras
 inicio = 0;
 total_barcosA = 0;
 total_barcosB = 0;
@@ -14,7 +14,7 @@ $(document).ready(function(){ //prepara o documento
 				barco = $(this).css("font-size");
 					if(barco == "20px"){ //eu atribui a propriedade 'font-size' pra dizer que isso É um barco
 						$(this).css("background-color", "white");
-						$(this).css("font-size","0px"); //ele veio por esse caminho, quer dizer que ele vai virar agua quando começar
+						$(this).css("font-size","0px"); //ele veio por esse caminho, quer dizer que ele vai virar agua
 						if(tabelaA == 1){ 
 							total_barcosA --;}
 							else{
@@ -53,14 +53,14 @@ $(document).ready(function(){ //prepara o documento
 							alert("Errou!"); //ERROW
 							ocult();		//se você errou, altera qual tabela você vai jogar chamando a função ocult
 						}
-				}else{alert("Selecione um bloco com água Comandante!")}//agora se vc for idiota e selecionar algo que nao seja agua,
+				}else{alert("Selecione um bloco com água Comandante!")}//agora se vc for meio cego e selecionar algo que nao seja agua,
 				//o programa devolve com essa mensagem
 			}
 		document.getElementById("log").innerHTML = ("          Registro de Batalha: <BR>," + Vetor);//UPDATE NO REGISTRO
 		document.getElementById("pontuaçãoA").innerHTML = ("          Barcos da tabela A: " + total_barcosA);//UPDATE NO PLACAR
 		document.getElementById("pontuaçãoB").innerHTML = ("          Barcos da tabela B: " + total_barcosB);//UPDATE NO PLACAR
 		
-		if(total_barcosA==0 && inicio==1){ //esse IF é pra vereficar se TODOS barcos foram afundados ou nao
+		if(total_barcosA==0 && inicio==1){ //esse IF é pra verificar se TODOS barcos foram afundados ou nao
 			alert("O Comandante A perdeu");
 			inicio++; //+1 no inicio é pra nao deixar o player mexer em mais nada na pagina
 		}else
@@ -71,13 +71,13 @@ $(document).ready(function(){ //prepara o documento
 		});
 });
 function begin(){ //essa função é chamada quando os caras pressionam o botao "inicio"
-	if(total_barcosA>=20 && total_barcosB>=20){ //SE TODAS AS TABELAS TEM 20 BARCOS
+	if(total_barcosA>=20 && total_barcosB>=20){ //SE TODAS AS TABELAS TEM 20 BARCOS NO MINIMO
 		$(".squarenix").css("background-color","blue");  //TODO o background fica azul
 		alert("A Batalha começou!!");
 		$(".trocar").hide(); //oculta os 2 botoes la em cima
 		ocult();
 		inicio ++; //AND SO IT BEGINS
-		getElementById("OST").audioObject.src = "img/battle.ogg";
+		getElementById("OST").audioObject.src = "img/battle.ogg"; //tentativa fracassada de colocar uma soundtrack
 	}
 	else{
 		alert("Não temos barcos suficientes para a batalha Comandante, posicione pelo menos 20!");//caso nao tenham 20 barcos
